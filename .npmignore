@@ -1,0 +1,14 @@
+# Source — not needed in the published package, only dist/ ships
+server/
+client/
+scripts/*.ts
+
+# Dev/config files
+.vscode/
+node_modules/
+bun.lock
+tsconfig.json
+CODEBASE.md
+SETUP.md
+
+# client/dist is intentionally NOT ignored — the binary serves it statically
