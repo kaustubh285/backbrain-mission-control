@@ -38,6 +38,7 @@
     "build": "bun run build:client && bun run build:server && bun run build:copy-client",
     "prepublishOnly": "bun run build",
     "install-hooks": "bun server/cli.ts install-hooks",
+    "uninstall-hooks": "bun server/cli.ts uninstall-hooks",
     "test": "bun test"
   },
   "devDependencies": {

@@ -23,6 +23,7 @@ Usage:
 Commands:
   start            Start the daemon and open the UI (default)
   install-hooks    Install Claude Code hooks into ~/.claude
+  uninstall-hooks  Remove Claude Code hooks from ~/.claude
 
 Options:
   -v, --version    Print version
@@ -52,9 +53,14 @@ if (arg === "--help" || arg === "-h") {
 }
 
 if (arg === "install-hooks") {
-  // Dynamically import so the hooks installer runs in the same process
   const hooksScript = join(import.meta.dir, "../scripts/install-hooks.ts");
   await import(hooksScript);
+  process.exit(0);
+}
+
+if (arg === "uninstall-hooks") {
+  const uninstallScript = join(import.meta.dir, "../scripts/uninstall-hooks.ts");
+  await import(uninstallScript);
   process.exit(0);
 }
 
