@@ -24,7 +24,7 @@ Starts the Bun backend at `http://localhost:4321`.
 bun run dev:client
 ```
 
-Starts Vite at `http://localhost:5173` (proxies API/WS to the daemon).
+Starts Vite at `http://localhost:4322` (proxies API/WS to the daemon).
 
 ### 4. Install Claude Code hooks
 
